@@ -1,3 +1,11 @@
-// This file is now redundant - all functionality moved to animations.js
-// Keep this file empty or remove it from your HTML
-console.log('Portfolio website loaded successfully!');
+// Contact form new tab submission
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    // Set form target to _blank to open in new tab
+    this.setAttribute('target', '_blank');
+    
+    // Optional: Add a small delay to ensure the form opens in new tab
+    setTimeout(() => {
+        // Reset the form target after submission
+        this.removeAttribute('target');
+    }, 1000);
+});
